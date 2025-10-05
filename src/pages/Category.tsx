@@ -84,7 +84,7 @@ const Category: React.FC = () => {
               </div>
               <div className="card-actions">
                 {item.chatgpt_url && (
-                  <a href={item.chatgpt_url} target="_blank" rel="noopener noreferrer" className="action-link">
+                  <a href={ 'https://chatgpt.com/?prompt=' + item.prompt} target="_blank" rel="noopener noreferrer" className="action-link">
                     <button className="btn-primary">{t('openInChatGPT')}</button>
                   </a>
                 )}
