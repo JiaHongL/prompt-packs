@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLang } from '../i18n';
 import DownloadMenu from './DownloadMenu'; // Assuming DownloadMenu is created
@@ -13,9 +13,20 @@ interface ToolbarProps {
 const Toolbar: React.FC<ToolbarProps> = ({ title, itemCount, dataToDownload, downloadFilename }) => {
   const { t } = useLang();
   const navigate = useNavigate();
+  const [copied, setCopied] = useState(false);
 
   const handleBack = () => {
     navigate(-1);
+  };
+
+  const handleCopyTitle = async () => {
+    try {
+      await navigator.clipboard.writeText(title);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1200);
+    } catch (err) {
+      console.error('Failed to copy title: ', err);
+    }
   };
 
   return (
@@ -25,7 +36,13 @@ const Toolbar: React.FC<ToolbarProps> = ({ title, itemCount, dataToDownload, dow
         {t('back')}
       </button>
       <div className="toolbar-title-group">
-        <h2>{title}</h2>
+        <h2 
+          onClick={handleCopyTitle} 
+          className={`clickable-title ${copied ? 'copied' : ''}`}
+          title={copied ? t('copied') : t('copy')}
+        >
+          {title} <span className="copy-icon">{copied ? '✓' : '📋'}</span>
+        </h2>
         {itemCount !== undefined && (
           <span className="count-badge">{itemCount}</span>
         )}
