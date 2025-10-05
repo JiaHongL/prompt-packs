@@ -1,4 +1,12 @@
 {
+  "ChatGPT_for_any_role": {
+    "title": "ChatGPT 適用於任何角色",
+    "page_url": "https://academy.openai.com/public/clubs/work-users-ynjqu/resources/chatgpt-for-any-role",
+    "tags": [
+      "WORK USERS",
+      "PROMPT PACKS"
+    ]
+  },
   "ChatGPT_for_HR": {
     "title": "ChatGPT 適用於人力資源",
     "page_url": "https://academy.openai.com/public/clubs/work-users-ynjqu/resources/use-cases-hr",
@@ -10,14 +18,6 @@
   "ChatGPT_for_IT": {
     "title": "ChatGPT 適用於資訊科技",
     "page_url": "https://academy.openai.com/public/clubs/work-users-ynjqu/resources/use-cases-it",
-    "tags": [
-      "WORK USERS",
-      "PROMPT PACKS"
-    ]
-  },
-  "ChatGPT_for_any_role": {
-    "title": "ChatGPT 適用於任何角色",
-    "page_url": "https://academy.openai.com/public/clubs/work-users-ynjqu/resources/chatgpt-for-any-role",
     "tags": [
       "WORK USERS",
       "PROMPT PACKS"
