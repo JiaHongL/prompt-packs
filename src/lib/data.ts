@@ -9,10 +9,10 @@ const dataCache = new Map<string, any>();
  */
 export const resolveDataPath = (type: 'prompt' | 'category', { lang, key }: { lang: string; key?: string }): string => {
   if (type === 'prompt') {
-    return `/public/data/${lang}/prompt.json`;
+    return `/data/${lang}/prompt.json`;
   }
   if (type === 'category' && key) {
-    return `/public/data/${lang}/${key}.json`;
+    return `/data/${lang}/${key}.json`;
   }
   throw new Error('Invalid data path resolution parameters.');
 };
