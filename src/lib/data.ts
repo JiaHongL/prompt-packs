@@ -1,6 +1,9 @@
 // In-memory cache for fetched data
 const dataCache = new Map<string, any>();
 
+// Get base URL from Vite config
+const BASE_URL = import.meta.env.BASE_URL;
+
 /**
  * Resolves the data path for prompt.json or category JSON files.
  * @param type - "prompt" or "category"
@@ -9,10 +12,10 @@ const dataCache = new Map<string, any>();
  */
 export const resolveDataPath = (type: 'prompt' | 'category', { lang, key }: { lang: string; key?: string }): string => {
   if (type === 'prompt') {
-    return `/data/${lang}/prompt.json`;
+    return `${BASE_URL}data/${lang}/prompt.json`;
   }
   if (type === 'category' && key) {
-    return `/data/${lang}/${key}.json`;
+    return `${BASE_URL}data/${lang}/${key}.json`;
   }
   throw new Error('Invalid data path resolution parameters.');
 };
