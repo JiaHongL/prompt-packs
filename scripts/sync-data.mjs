@@ -24,8 +24,8 @@ async function main() {
   }, {});
 
   const config = {
-    srcEn: args['src-en'] || 'out',
-    srcZh: args['src-zh'] || 'out_zh',
+    srcEn: args['src-en'] || 'crawler/out',
+    srcZh: args['src-zh'] || 'crawler/out_zh',
     dest: args['dest'] || 'public/data',
     fillMissing: args['fill-missing'] || 'none',
     pretty: args['pretty'] ? parseInt(args['pretty'], 10) : 2,
