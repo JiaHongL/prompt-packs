@@ -11,6 +11,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "deploy": "bash scripts/deploy-gh-pages.sh",
     "all": "npm run crawl && npm run data:sync && npm run dev"
   },
   "dependencies": {
