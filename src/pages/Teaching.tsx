@@ -7,8 +7,8 @@ const Teaching: React.FC = () => {
   
   // Different video IDs for different languages
   const videoIds = {
-    'zh-TW': 'dQw4w9WgXcQ', // Placeholder for Chinese video
-    'en': 'dQw4w9WgXcQ'     // Placeholder for English video
+    'zh-TW': 'plKUBosprDw', // Placeholder for Chinese video
+    'en': 'gn-ulmpToao'     // Placeholder for English video
   };
   
   const youtubeVideoId = videoIds[lang as keyof typeof videoIds] || videoIds['zh-TW'];
