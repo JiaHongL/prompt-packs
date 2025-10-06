@@ -8,9 +8,10 @@ interface ToolbarProps {
   itemCount?: number;
   dataToDownload?: any;
   downloadFilename?: string;
+  disableCopy?: boolean;
 }
 
-const Toolbar: React.FC<ToolbarProps> = ({ title, itemCount, dataToDownload, downloadFilename }) => {
+const Toolbar: React.FC<ToolbarProps> = ({ title, itemCount, dataToDownload, downloadFilename, disableCopy }) => {
   const { t } = useLang();
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
@@ -36,13 +37,19 @@ const Toolbar: React.FC<ToolbarProps> = ({ title, itemCount, dataToDownload, dow
         {t('back')}
       </button>
       <div className="toolbar-title-group">
-        <h2 
-          onClick={handleCopyTitle} 
-          className={`clickable-title ${copied ? 'copied' : ''}`}
-          title={copied ? t('copied') : t('copy')}
-        >
-          {title} <span className="copy-icon">{copied ? '✓' : '📋'}</span>
-        </h2>
+        {disableCopy ? (
+          <h2>
+            {title}
+          </h2>
+        ) : (
+          <h2 
+            onClick={handleCopyTitle} 
+            className={`clickable-title ${copied ? 'copied' : ''}`}
+            title={copied ? t('copied') : t('copy')}
+          >
+            {title} <span className="copy-icon">{copied ? '✓' : '📋'}</span>
+          </h2>
+        )}
         {itemCount !== undefined && (
           <span className="count-badge">{itemCount}</span>
         )}

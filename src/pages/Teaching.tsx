@@ -15,7 +15,7 @@ const Teaching: React.FC = () => {
 
   return (
     <div>
-      <Toolbar title={t('teachingPageTitle')} />
+      <Toolbar title={t('teachingPageTitle')} disableCopy={true} />
       {/* Removed h1 and p tags */}
       {/* <h1>{t('teachingPageTitle')}</h1> */}
       {/* <p>How to use this application. Watch the video below:</p> */}
