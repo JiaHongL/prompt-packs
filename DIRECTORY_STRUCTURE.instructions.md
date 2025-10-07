@@ -1,3 +1,4 @@
+```
 PROMPT-PACKS/
 ├─ crawler/                         # 爬蟲區
 │  ├─ crawl-openai-academy.mjs      # 爬蟲主程式
@@ -18,12 +19,6 @@ PROMPT-PACKS/
 ├─ scripts/                         # 自動化腳本（轉檔/驗證/索引）
 │  └─ sync-data.mjs                 # ★ 將 crawler 輸出轉到 public/data/{lang}
 │
-├─ docs/                            # 文件區
-│  ├─ _RUNBOOK.md                   # 運作手冊
-│  ├─ DIRECTORY_STRUCTURE.md        # 目錄結構說明
-│  ├─ IMPLEMENTATION_TASKS.md       # 實作任務清單
-│  ├─ UI.md                         # UI 設計文件
-│  └─ UI_UPDATES_PHASE[1-4].md      # UI 更新日誌
 │
 ├─ public/                          # 靜態資源
 │  ├─ vite.svg                      # 預設 favicon
@@ -91,3 +86,4 @@ PROMPT-PACKS/
 ├─ vite.config.ts                   # Vite 設定
 ├─ .gitignore                       # Git 忽略清單
 └─ README.md                        # 專案說明
+```

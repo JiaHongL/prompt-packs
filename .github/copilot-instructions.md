@@ -324,8 +324,7 @@ export default NewComponent;
 
 ### GitHub Pages
 1. 執行 `npm run build`
-2. 將 `dist/` 目錄內容推送到 `gh-pages` 分支
-3. 設定 GitHub Pages 指向 `gh-pages` 分支
+2. 執行 `npm run deploy` (需安裝 `gh-pages` 套件)
 
 ### 注意事項
 - 使用 HashRouter 避免 404 問題
